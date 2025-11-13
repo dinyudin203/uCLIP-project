@@ -1,379 +1,231 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-		<!-- Replace the content tag with appropriate information -->
-		<meta
-			name="description"
-			content="Parameter-Efficient Multilingual Extension of Vision-Language Models with Unpaired Data"
-		/>
-		<meta property="og:title" content="uCLIP" />
-		<meta
-			property="og:description"
-			content="Parameter-Efficient Multilingual Extension of Vision-Language Models with Unpaired Data"
-		/>
-		<meta
-			property="og:url"
-			content="https://dinyudin203.github.io/uCLIP-project/"
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		/>
-		<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-		<meta
-			property="og:image"
-			content="static/image/your_banner_image.png"
-		/>
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
+    <!-- Primary Meta -->
+    <title>uCLIP: Parameter-Efficient Multilingual Extension of Vision–Language Models with Unpaired Data</title>
+    <meta name="description" content="uCLIP is a parameter‑efficient framework that extends vision–language models to under‑represented languages without using image–text or text–text pairs." />
+    <meta name="keywords" content="uCLIP, Multilingual Vision–Language Model, CLIP, Low-resource Languages, Parameter-efficient Training, XM3600" />
+    <link rel="canonical" href="https://dinyudin203.github.io/uCLIP-project/" />
+    <meta name="robots" content="index,follow" />
 
-		<meta name="twitter:title" content="uCLIP" />
-		<meta
-			name="twitter:description"
-			content="Parameter-Efficient Multilingual Extension of Vision-Language Models with Unpaired Data"
-		/>
-		<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-		<meta
-			name="twitter:image"
-			content="static/images/your_twitter_banner_image.png"
-		/>
-		<meta name="twitter:card" content="summary_large_image" />
-		<!-- Keywords for your paper to be indexed by-->
-		<meta
-			name="keywords"
-			content="Multilingual Vision–Language Model, Low-resource Languages, Parameter-efficient Training"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="uCLIP" />
+    <meta property="og:description" content="Parameter‑Efficient Multilingual Extension of Vision–Language Models with Unpaired Data" />
+    <meta property="og:url" content="https://dinyudin203.github.io/uCLIP-project/" />
+    <!-- Provide a real 1200x630 image at the path below -->
+    <meta property="og:image" content="static/images/banner_1200x630.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
 
-		<title>uCLIP</title>
-		<link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-			rel="stylesheet"
-		/>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="uCLIP" />
+    <meta name="twitter:description" content="Parameter‑Efficient Multilingual Extension of Vision–Language Models with Unpaired Data" />
+    <!-- Provide a real 1200x600 image at the path below -->
+    <meta name="twitter:image" content="static/images/banner_1200x600.png" />
 
-		<link rel="stylesheet" href="static/css/bulma.min.css" />
-		<link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
-		<link rel="stylesheet" href="static/css/bulma-slider.min.css" />
-		<link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-		/>
-		<link rel="stylesheet" href="static/css/index.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Noto+Sans:400,500,700|Castoro:400,700&display=swap" rel="stylesheet" />
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-		<script defer src="static/js/fontawesome.all.min.js"></script>
-		<script src="static/js/bulma-carousel.min.js"></script>
-		<script src="static/js/bulma-slider.min.js"></script>
-		<script src="static/js/index.js"></script>
-	</head>
-	<body>
-		<section class="hero">
-			<div class="hero-body">
-				<div class="container is-max-desktop">
-					<div class="columns is-centered">
-						<div class="column has-text-centered">
-							<h1 class="title is-1 publication-title">
-								uCLIP: Parameter-Efficient Multilingual Extension of Vision-Language Models with Unpaired Data
-							</h1>
-							<div class="is-size-5 publication-authors">
-								<!-- Paper authors -->
-								<span class="author-block">
-									<a
-										href="https://www.linkedin.com/in/dahyun-chung-9631b7379"
-										target="_blank"
-										>Dahyun Chung</a
-									><sup>*</sup>,</span
-								>
-								<span class="author-block">
-									<a
-										href="http://linkedin.com/in/donghyun1228"
-										target="_blank"
-										>Donghyun Shin</a
-									><sup>*</sup>,</span
-								>
-                <span class="author-block">
-									<a
-										href="https://dinyudin203.github.io/"
-										target="_blank"
-										>Yujin Sung</a
-									><sup>*</sup>,</span
-								>
-                <span class="author-block">
-									<a
-										href="https://www.linkedin.com/in/seunggi-moon/"
-										target="_blank"
-										>Seunggi Moon</a
-									>
-								</span>
-								<span class="author-block">
-									<a
-										target="_blank"
-										> Jinwoo Jeon</a
-									>
-								</span>
-                <span class="author-block">
-									<a
-										href="https://dmlab.korea.ac.kr/"
-										target="_blank"
-										> Byung-Jun Lee</a
-									>
-								</span>
-							</div>
+    <!-- Icons & Styles -->
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
 
-							<div class="is-size-5 publication-authors">
-								<span class="author-block"
-									>KAIST, Korea University<br />AAAI 2026</span
-								>
-								<span class="eql-cntrb"
-									><small
-										><br /><sup>*</sup>Indicates Equal
-										Contribution</small
-									></span
-								>
-							</div>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js" defer></script>
+    <script src="static/js/fontawesome.all.min.js" defer></script>
+    <script src="static/js/bulma-carousel.min.js" defer></script>
+    <script src="static/js/bulma-slider.min.js" defer></script>
+    <script src="static/js/index.js" defer></script>
 
-							<div class="column has-text-centered">
-								<div class="publication-links">
-									<!-- Arxiv PDF link -->
-									<span class="link-block">
-										<a
-											target="_blank"
-											class="external-link button is-normal is-rounded is-dark"
-										>
-											<span class="icon">
-												<i class="fas fa-file-pdf"></i>
-											</span>
-											<span>Paper</span>
-										</a>
-									</span>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "uCLIP: Parameter-Efficient Multilingual Extension of Vision–Language Models with Unpaired Data",
+        "headline": "uCLIP: Parameter-Efficient Multilingual Extension of Vision–Language Models with Unpaired Data",
+        "author": [
+          {"@type": "Person", "name": "Dahyun Chung"},
+          {"@type": "Person", "name": "Donghyun Shin"},
+          {"@type": "Person", "name": "Yujin Sung"},
+          {"@type": "Person", "name": "Seunggi Moon"},
+          {"@type": "Person", "name": "Jinwoo Jeon"},
+          {"@type": "Person", "name": "Byung-Jun Lee"}
+        ],
+        "isPartOf": {"@type": "PublicationVolume", "name": "AAAI 2026"},
+        "inLanguage": "en",
+        "url": "https://dinyudin203.github.io/uCLIP-project/"
+      }
+    </script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                uCLIP: Parameter‑Efficient Multilingual Extension of Vision–Language Models with Unpaired Data
+              </h1>
 
-									<!-- Supplementary PDF link -->
-									<!-- <span class="link-block">
-										<a
-											href="static/pdfs/BMVC25_SemanticControlNet_Supplementary.pdf"
-											target="_blank"
-											class="external-link button is-normal is-rounded is-dark"
-										>
-											<span class="icon">
-												<i class="fas fa-file-pdf"></i>
-											</span>
-											<span>Supplementary</span>
-										</a>
-									</span> -->
+              <div class="is-size-5 publication-authors" aria-label="Authors">
+                <span class="author-block"><a href="https://www.linkedin.com/in/dahyun-chung-9631b7379" target="_blank" rel="noopener">Dahyun Chung</a><sup>*</sup>,</span>
+                <span class="author-block"><a href="http://linkedin.com/in/donghyun1228" target="_blank" rel="noopener">Donghyun Shin</a><sup>*</sup>,</span>
+                <span class="author-block"><a href="https://dinyudin203.github.io/" target="_blank" rel="noopener">Yujin Sung</a><sup>*</sup>,</span>
+                <span class="author-block"><a href="https://www.linkedin.com/in/seunggi-moon/" target="_blank" rel="noopener">Seunggi Moon</a>,</span>
+                <span class="author-block">Jinwoo Jeon,</span>
+                <span class="author-block"><a href="https://dmlab.korea.ac.kr/" target="_blank" rel="noopener">Byung‑Jun Lee</a></span>
+              </div>
 
-									<!-- Github link -->
-									<span class="link-block">
-										<a
-											href="https://github.com/dinyudin203/uCLIP"
-											target="_blank"
-											class="external-link button is-normal is-rounded is-dark"
-										>
-											<span class="icon">
-												<i class="fab fa-github"></i>
-											</span>
-											<span>Code</span>
-										</a>
-									</span>
+              <div class="is-size-6 publication-authors">
+                <span class="author-block">KAIST, Korea University<br />AAAI 2026</span>
+                <span class="eql-cntrb"><small><br /><sup>*</sup>Indicates equal contribution</small></span>
+              </div>
 
-									<!-- ArXiv abstract Link -->
-									<!-- <span class="link-block">
-										<a
-											href="https://arxiv.org/abs/2509.21938"
-											target="_blank"
-											class="external-link button is-normal is-rounded is-dark"
-										>
-											<span class="icon">
-												<i class="ai ai-arxiv"></i>
-											</span>
-											<span>arXiv</span>
-										</a> -->
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Paper link: replace '#' when available -->
+                  <span class="link-block">
+                    <a href="#" aria-disabled="true" class="external-link button is-normal is-rounded is-dark" title="Paper coming soon">
+                      <span class="icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
 
-		<!-- Teaser video-->
-		<section class="hero teaser">
-			<div class="container is-max-desktop">
-				<div class="hero-body">
-					<img
-						poster=""
-						id="tree"
-						height="100%"
-						src="main_architecture.png"
-					/>
-					<h2 class="subtitle has-text-centered">
-						uCLIP, a parameter-efficient framework that
-            addresses the fundamental challenge of extending visionlanguage models to underrepresented languages without
-            requiring need for image–text (I-T) pairs—whether multilingual or English—and multilingual–English text (T-T)
-            pairs during training
-					</h2>
-				</div>
-			</div>
-		</section>
-		<!-- End teaser video -->
+                  <!-- Code link -->
+                  <span class="link-block">
+                    <a href="https://github.com/dinyudin203/uCLIP" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
 
-		<!-- Paper abstract -->
-		<section class="section hero is-light">
-			<div class="container is-max-desktop">
-				<div class="columns is-centered has-text-centered">
-					<div class="column is-four-fifths">
-						<h2 class="title is-3">Abstract</h2>
-						<div class="content has-text-justified">
-							<p>
-								Contrastive Language–Image Pre-training (CLIP) has demonstrated strong generalization across a wide range of visual tasks by leveraging large-scale English–image pairs. However, its extension to low-resource languages remains limited due to the scarcity of high-quality multilingual image–text data. Existing multilingual vision–language models exhibit consistently low retrieval performance in underrepresented languages—including Czech, Finnish, Croatian, Hungarian, Romanian—on the Crossmodal-3600 (XM3600) benchmark. To address this, we propose a lightweight and data-efficient framework for multilingual vision–language alignment. Our approach requires no image–text pairs or text-text pairs and freezes both the pretrained image encoder and multilingual text encoder during training. Only a compact 1.7M-parameter projection module is trained, using a contrastive loss over English representations as semantic anchors. This minimal training setup enables robust multilingual alignment even for languages with limited supervision. Extensive evaluation across multiple multilingual retrieval benchmarks confirms the effectiveness of our method, showing significant gains in five underrepresented languages where existing models typically underperform. These findings highlight the effectiveness of our pivot-based, parameter-efficient alignment strategy for inclusive multimodal learning
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End paper abstract -->
+                  <!-- Optional: ArXiv link (uncomment and update when ready) -->
+                  <!--
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/XXXXXXXX" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="ai ai-arxiv" aria-hidden="true"></i></span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  -->
+                </div>
+              </div>
 
-		<!-- Image carousel -->
-		<section class="hero is-small">
-			<div class="hero-body">
-				<div class="container">
-					<div
-						id="results-carousel"
-						class="carousel results-carousel"
-					>
-						<div class="item">
-							<!-- Your image here -->
-							<img
-								src="static/images/retrieval.png"
-								alt="Multilingual Image–Text Retrieval"
-							/>
-							<h2 class="subtitle has-text-centered">
-                Multilingual Image–Text Retrieval
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-							</h2>
-						</div>
-						<div class="item">
-							<!-- Your image here -->
-							<img
-								src="static/images/zero_classifcation.png"
-								alt="MY ALT TEXT"
-							/>
-							<h2 class="subtitle has-text-centered">
-								Zero-shot Classification
-							</h2>
-						</div>
-						<div class="item">
-							<!-- Your image here -->
-							<img
-								src="static/images/Siglip2ver.png"
-								alt="Ablation on Encoders"
-							/>
-							<h2 class="subtitle has-text-centered">
-                Ablation on Encoders
-                To further evaluate the generalizability of our method to
-                inherently multilingual vision-language models, we replace
-                the vision encoder with SigLIP2.
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End image carousel -->
+    <!-- Teaser / Hero Image -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img id="main-architecture" src="static/images/main_architecture.png" alt="uCLIP architecture overview" loading="eager" style="width:100%;height:auto;" />
+          <h2 class="subtitle has-text-centered">
+            uCLIP is a parameter‑efficient framework that extends vision–language models to under‑represented languages without requiring any image–text (I–T) pairs—multilingual or English—or multilingual–English text–text (T–T) pairs during training.
+          </h2>
+        </div>
+      </div>
+    </section>
 
-		<!-- Method -->
-		<div class="hero-body">
-			<div
-				class="container"
-				style="
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-				"
-			>
-				<img
-					poster=""
-					id="tree"
-					height="100%"
-					src="static/images/main_architecture.png"
-					style="max-width: 800px; margin: auto"
-				/>
-				<h2 class="subtitle has-text-centered">
-					uCLIP, a parameter-efficient framework that
-            addresses the fundamental challenge of extending visionlanguage models to underrepresented languages without
-            requiring need for image–text (I-T) pairs—whether multilingual or English—and multilingual–English text (T-T)
-            pairs during training
-				</h2>
-			</div>
-		</div>
+    <!-- Abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Contrastive Language–Image Pre‑training (CLIP) demonstrates strong generalization across visual tasks by leveraging large‑scale English image–text pairs. However, its extension to low‑resource languages remains limited due to the scarcity of high‑quality multilingual image–text data. Existing multilingual vision–language models show consistently low retrieval performance in under‑represented languages—such as Czech, Finnish, Croatian, Hungarian, and Romanian—on the Crossmodal‑3600 (XM3600) benchmark.
+              </p>
+              <p>
+                We propose a lightweight, data‑efficient framework for multilingual vision–language alignment. Our approach requires <em>no</em> image–text or text–text pairs and freezes both the pretrained image encoder and the multilingual text encoder. Only a compact 1.7M‑parameter projection module is trained, using a contrastive loss over English representations as semantic anchors. This minimal setup enables robust multilingual alignment even for languages with limited supervision.
+              </p>
+              <p>
+                Extensive evaluation across multiple multilingual retrieval benchmarks confirms the effectiveness of our method, with significant gains in the five under‑represented languages where existing models typically underperform. These findings highlight the effectiveness of our pivot‑based, parameter‑efficient alignment strategy for inclusive multimodal learning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Paper poster -->
-		<section class="hero is-small is-light" style="display: none">
-			<div class="hero-body">
-				<div class="container">
-					<h2 class="title">Poster</h2>
+    <!-- Results Carousel -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel" aria-label="Results carousel">
+            <div class="item">
+              <img src="static/images/retrieval.png" alt="Multilingual Image–Text Retrieval results" loading="lazy" />
+              <h2 class="subtitle has-text-centered">Multilingual Image–Text Retrieval</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/zero_classifcation.png" alt="Zero‑shot classification results" loading="lazy" />
+              <h2 class="subtitle has-text-centered">Zero‑shot Classification</h2>
+            </div>
+            <div class="item">
+              <img src="static/images/Siglip2ver.png" alt="Ablation study replacing the vision encoder with SigLIP2" loading="lazy" />
+              <h2 class="subtitle has-text-centered">
+                Ablation on Encoders — To evaluate generalizability to inherently multilingual VLMs, we also replace the vision encoder with SigLIP2.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					<iframe
-						src="static/pdfs/sample.pdf"
-						width="100%"
-						height="550"
-					>
-					</iframe>
-				</div>
-			</div>
-		</section>
-		<!--End paper poster -->
+    <!-- (Optional) Poster: keep hidden until file is available -->
+    <section class="hero is-small is-light" style="display:none">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Poster</h2>
+          <iframe src="static/pdfs/sample.pdf" width="100%" height="550" title="uCLIP Poster PDF"></iframe>
+        </div>
+      </div>
+    </section>
 
-		<!--BibTex citation -->
-		<section class="section" id="BibTeX">
-			<div class="container is-max-desktop content">
-				<h2 class="title">BibTeX</h2>
-				<pre><code>TBA</code></pre>
-			</div>
-		</section>
-		<!--End BibTex citation -->
+    <!-- BibTeX -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>TBA</code></pre>
+      </div>
+    </section>
 
-		<footer class="footer">
-			<div class="container">
-				<div class="columns is-centered">
-					<div class="column is-8">
-						<div class="content">
-							<p>
-								This page was built using the
-								<a
-									href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-									target="_blank"
-									>Academic Project Page Template</a
-								>
-								which was adopted from the <a
-									href="https://nerfies.github.io"
-									target="_blank"
-									>Nerfies</a
-								> project page. You are free to borrow the
-								source code of this website, we just ask that
-								you link back to this page in the footer. <br />
-								This website is licensed under a
-								<a
-									rel="license"
-									href="http://creativecommons.org/licenses/by-sa/4.0/"
-									target="_blank"
-									>Creative Commons Attribution-ShareAlike 4.0
-									International License</a
-								>.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-		<!-- Statcounter tracking code -->
-
-		<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-		<!-- End of Statcounter Code -->
-	</body>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>
+                which was adapted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page. You are free to borrow the
+                source code of this website; we just ask that you link back to this page in the footer.<br />
+                This website is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
