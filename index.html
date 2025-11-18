@@ -182,7 +182,7 @@
                 <img src="static/images/main_architecture.png" alt="uCLIP architecture overview" style="width: 100%; max-height: 500px;" />
               </div>
               <div class="content has-text-justified">
-                uCLIP is a parameter‑efficient framework that extends vision–language models to under‑represented languages without requiring any image–text (I–T) pairs—multilingual or English—or multilingual–English text–text (T–T) pairs during training.
+                We propose a lightweight alignment framework that bridges multilingual text and image embeddings via English, without requiring paired I-T and T-T data or encoder finetuning. \textit{uCLIP} employs frozen encoders along with compact projection heads to map inputs into a shared embedding space. At inference time, only multilingual text encoder, image encoder and projectors are used. The model directly encodes multilingual text and image inputs using the frozen encoders, followed by projection into the shared space.
               </div>
           </div>
         </div>
