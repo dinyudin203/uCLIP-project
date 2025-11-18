@@ -84,24 +84,29 @@
               </h1>
 
               <div class="is-size-5 publication-authors" aria-label="Authors">
-                <span class="author-block"><a href="https://www.linkedin.com/in/dahyun-chung-9631b7379" target="_blank" rel="noopener">Dahyun Chung</a><sup>*</sup>,</span>
-                <span class="author-block"><a href="http://linkedin.com/in/donghyun1228" target="_blank" rel="noopener">Donghyun Shin</a><sup>*</sup>,</span>
-                <span class="author-block"><a href="https://dinyudin203.github.io/" target="_blank" rel="noopener">Yujin Sung</a><sup>*</sup>,</span>
-                <span class="author-block"><a href="https://www.linkedin.com/in/seunggi-moon/" target="_blank" rel="noopener">Seunggi Moon</a><sup>*</sup>,</span>
-                <span class="author-block">Jinwoo Jeon,</span>
-                <span class="author-block"><a href="https://dmlab.korea.ac.kr/" target="_blank" rel="noopener">Byung‑Jun Lee</a></span>
+                <span class="author-block"><a href="https://www.linkedin.com/in/dahyun-chung-9631b7379" target="_blank" rel="noopener">Dahyun Chung</a><sup>*1</sup>,</span>
+                <span class="author-block"><a href="http://linkedin.com/in/donghyun1228" target="_blank" rel="noopener">Donghyun Shin</a><sup>*2</sup>,</span>
+                <span class="author-block"><a href="https://dinyudin203.github.io/" target="_blank" rel="noopener">Yujin Sung</a><sup>*2</sup>,</span>
+                <span class="author-block"><a href="https://www.linkedin.com/in/seunggi-moon/" target="_blank" rel="noopener">Seunggi Moon</a><sup>*2</sup>,</span>
+                <span class="author-block">Jinwoo Jeon<sup>2</sup>,</span>
+                <span class="author-block"><a href="https://dmlab.korea.ac.kr/" target="_blank" rel="noopener">Byung‑Jun Lee</a><sup>2</sup></span>
               </div>
-
-              <div class="is-size-6 publication-authors">
-                <span class="author-block">KAIST, Korea University<br />AAAI 2026</span>
-                <span class="eql-cntrb"><small><br /><sup>*</sup>Indicates equal contribution</small></span>
-              </div>
-
+              <div class="is-size-5 publication-authors">
+								<span class="author-block"
+									><sup>1</sup> KAIST AI, <sup>2</sup> Korea University<br />AAAI 2026</span
+								>
+								<span class="eql-cntrb"
+									><small
+										><br /><sup>*</sup>Indicates Equal
+										Contribution</small
+									></span
+								>
+							</div>
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <!-- Paper link: replace '#' when available -->
                   <span class="link-block">
-                    <a href="#" aria-disabled="true" class="external-link button is-normal is-rounded is-dark" title="Paper coming soon">
+                    <a href="https://arxiv.org/abs/2511.13036" aria-disabled="true" class="external-link button is-normal is-rounded is-dark" title="Paper coming soon">
                       <span class="icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span>
                       <span>Paper</span>
                     </a>
@@ -166,25 +171,55 @@
         </div>
       </div>
     </section>
-
-    <!-- Results Carousel -->
-    <section class="hero is-small">
+    <section class="hero teaser is-light is-small">
       <div class="hero-body">
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel" aria-label="Results carousel">
-            <div class="item">
-              <img src="static/images/retrieval.png" alt="Multilingual Image–Text Retrieval results" loading="lazy" />
-              <h2 class="subtitle has-text-centered">Multilingual Image–Text Retrieval</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-three-fifths" style="margin-top: 30px; margin-bottom: 20px;">
+              <h2 class="title is-3">Multilingual Image–Text Retrieval</h2>
+              <div class="content has-text-justified">
+                We evaluate our approach on multilingual image-to-text retrieval, text-to-image retrieval, and zero-shot classification tasks across five low-resource languages
+                On image-to-text retrieval (I→T), \textit{uCLIP} achieves average R@10 scores of 53.2\%, 60.0\%, and 71.8\% on MSCOCO, Flickr30k, and XM3600 respectively, outperforming other baselines. Similarly, for text-to-image retrieval (T→I), it records 53.3\%, 59.7\%, and 70.4\%, achieving the competitive score.
+            % When comparing against strong baselines, \textit{uCLIP} shows clear advantages over other models.
+            Unlike baselines incorporate extensive multilingual pretraining or direct image-multilingual text or English-multilingual text supervision, \textit{uCLIP} operates without any explicit paired supervision and still achieves superior results---highlighting the effectiveness of its lightweight cross-modal alignment approach, using English as semantic pivot
+              </div>
+              <div class="content has-text-centered" style="margin-top: 20px;">
+                <img src="./img/retrieval.png" alt="How it works illustration" style="width: 100%; max-height: 500px;" />
             </div>
-            <div class="item">
-              <img src="static/images/zero_classifcation.png" alt="Zero‑shot classification results" loading="lazy" />
-              <h2 class="subtitle has-text-centered">Zero‑shot Classification</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero teaser is-light is-small">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-three-fifths" style="margin-top: 30px; margin-bottom: 20px;">
+              <h2 class="title is-3">Zero-shot Classification</h2>
+              <div class="content has-text-justified">
+                We assess zero-shot classification on multilingually translated benchmarks: CIFAR-10, and STL-10. 
+                \textit{uCLIP} maintains strong class discrimination across languages without using any paired data, unlike baselines such as M-CLIP and SigLIP2, which depend on direct T-T or I-T supervision. For example, in CIFAR-10, \textit{uCLIP} achieves 90.5 in Finnish and 91.9 in Croatian—matching or surpassing M-CLIP and SigLIP2 that rely on translated captions or massive multilingual text-image pairs, respectively. (e.g., 22B data in SigLIP2).
+              </div>
+              <div class="content has-text-centered" style="margin-top: 20px;">
+                <img src="./img/zero_classification.png" alt="How it works illustration" style="width: 100%; max-height: 500px;" />
             </div>
-            <div class="item">
-              <img src="static/images/Siglip2ver.png" alt="Ablation study replacing the vision encoder with SigLIP2" loading="lazy" />
-              <h2 class="subtitle has-text-centered">
-                Ablation on Encoders — To evaluate generalizability to inherently multilingual VLMs, we also replace the vision encoder with SigLIP2.
-              </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero teaser is-light is-small">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-three-fifths" style="margin-top: 30px; margin-bottom: 20px;">
+              <h2 class="title is-3">Qualitative Results</h2>
+              <div class="content has-text-justified">
+                We present qualitative comparisons of multilingual image-text retrieval. Each query is a translated sentence from one of five low-resource languages, and we compare the top-1 retrieved images from \textit{uCLIP} and four baselines. Compared to existing models, \textit{uCLIP} consistently retrieves more semantically aligned images, demonstrating robust comprehension of not only key objects but also relational and contextual elements in the sentence. 
+                For example, given the query “Two young men playing a game of soccer,” other models often retrieve images with only one person, scenes with more than two individuals, or even incorrect activities (e.g., frisbee), suggesting failure to capture compositional structure. In contrast, \textit{uCLIP} retrieves a correctly grounded image matching both the subject count and activity. Similarly, for the query “A red fire hydrant in front of a shopping center,” most models detect the hydrant but miss the “shopping center” context, indicating over-reliance on salient object keywords. \textit{uCLIP}, however, correctly captures both the foreground and background, illustrating strong visual grounding and full-sentence understanding.
+                These results suggest that \textit{uCLIP} is able to go beyond surface-level keyword matching and instead align multimodal features based on deeper cross-lingual and cross-modal semantic structures.
+              </div>
+              <div class="content has-text-centered" style="margin-top: 20px;">
+                <img src="./img/qualitative_results.png" alt="How it works illustration" style="width: 100%; max-height: 500px;" />
             </div>
           </div>
         </div>
