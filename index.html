@@ -182,7 +182,7 @@
                 <img src="static/images/main_architecture.png" alt="uCLIP architecture overview" style="width: 100%; max-height: 500px;" />
               </div>
               <div class="content has-text-justified">
-                We propose a lightweight alignment framework that bridges multilingual text and image embeddings via English, without requiring paired I-T and T-T data or encoder finetuning. <em>uCLIP\</em> employs frozen encoders along with compact projection heads to map inputs into a shared embedding space. At inference time, only multilingual text encoder, image encoder and projectors are used. The model directly encodes multilingual text and image inputs using the frozen encoders, followed by projection into the shared space.
+                We propose a lightweight alignment framework that bridges multilingual text and image embeddings via English, without requiring paired I-T and T-T data or encoder finetuning. <em>uCLIP</em> employs frozen encoders along with compact projection heads to map inputs into a shared embedding space. At inference time, only multilingual text encoder, image encoder and projectors are used. The model directly encodes multilingual text and image inputs using the frozen encoders, followed by projection into the shared space.
               </div>
           </div>
         </div>
@@ -201,7 +201,7 @@
             Unlike baselines incorporate extensive multilingual pretraining or direct image-multilingual text or English-multilingual text supervision, <em>uCLIP</em> operates without any explicit paired supervision and still achieves superior results---highlighting the effectiveness of its lightweight cross-modal alignment approach, using English as semantic pivot
               </div>
               <div class="content has-text-centered" style="margin-top: 20px;">
-                <img src="static/images/retrieval.png" alt="How it works illustration" style="width: 70%; max-height: 500px;" />
+                <img src="static/images/retrieval.png" alt="How it works illustration" style="width:100%; max-height: 500px;" />
             </div>
           </div>
         </div>
@@ -218,7 +218,7 @@
                 <em>uCLIP</em> maintains strong class discrimination across languages without using any paired data, unlike baselines such as M-CLIP and SigLIP2, which depend on direct T-T or I-T supervision. For example, in CIFAR-10, <em>uCLIP</em> achieves 90.5 in Finnish and 91.9 in Croatian—matching or surpassing M-CLIP and SigLIP2 that rely on translated captions or massive multilingual text-image pairs, respectively. (e.g., 22B data in SigLIP2).
               </div>
               <div class="content has-text-centered" style="margin-top: 20px;">
-                <img src="static/images/zero_classification.png" alt="How it works illustration" style="width: 100%; max-height: 500px;" />
+                <img src="static/images/zero_classification.png" alt="How it works illustration" style="width: 80%; max-height: 500px;" />
             </div>
           </div>
         </div>
