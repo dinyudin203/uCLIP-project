@@ -17,8 +17,9 @@ body {
 }
 
 .teaser .hero-body {
-	padding-top: 0;
-	padding-bottom: 3rem;
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 3rem;
 }
 
 .teaser {
